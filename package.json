@@ -1,0 +1,24 @@
+{
+	"name": "women-hate-speech-dec-server",
+	"version": "1.0.0",
+	"description": "Meow",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js",
+		"dev": "nodemon --exec \"npm start\"",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|json)\"",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"type": "module",
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.19.2",
+		"express": "^4.17.3"
+	},
+	"devDependencies": {
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.15",
+		"prettier": "^2.6.1"
+	}
+}
