@@ -1,0 +1,6 @@
+const config = {
+	BEARER_TOKEN:
+		"AAAAAAAAAAAAAAAAAAAAALQxawEAAAAA0T00qKTXMvNI5zDmsJULRwzK78I%3DG0XwOtJ46dsnDmKngzv8l7KYVZuyxJDk5nIlJKIUoPOCOk3JwJ",
+};
+
+export default config;
