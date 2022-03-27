@@ -1,5 +1,6 @@
 import { fetch } from "cross-fetch";
 import config from "../config.js";
+import detect from "../utils/detect.js";
 
 const options = {
 	method: "GET",
@@ -30,8 +31,12 @@ const detect_POST = async (req, res) => {
 	} catch {
 		return res.status(400).json({ message: "Error Fetching Tweet Details" });
 	}
-
-	return res.status(200).json(tweetsData);
+	//console.log(tweetsData.data.map((tweet) => tweet.text));
+	const resp = await detect(
+		tweetsData.data.map((tweet) => tweet.text),
+		tweetsData.data.map((tweet) => tweet.id)
+	);
+	return res.status(200).json(resp);
 };
 
 export default detect_POST;
